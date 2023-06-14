@@ -5,18 +5,12 @@ import "primevue/resources/primevue.min.css";
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css'
 
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { initializeApp } from "firebase/app";
 
-
 import App from './App.vue'
 import router from './router'
-
-
-
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyCHKLOWEAEZ7jxyZ4Ox4UTO6mFvW8ETZ2A",
