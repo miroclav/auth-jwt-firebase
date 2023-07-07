@@ -1,19 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-// import { useAuthStore } from '../stores/auth';
-import { useRouter } from 'vue-router'
-import InputText from 'primevue/inputtext';
-import Button from 'primevue/button';
-import Message from 'primevue/message';
-import Loader from '../components/Loader.vue'
-
-// const authStore = useAuthStore();
-// const router = useRouter();
-const email = ref();
-const password = ref();
-
-</script>
-
 <template>
     <h2>Sign Up</h2>
     <form class="flex flex-column gap-3">
@@ -29,10 +13,28 @@ const password = ref();
             </span>
             <InputText type="password" v-model="password" placeholder="Password" />
         </div>
-        <Loader v-if="authStore.loader" />
-        <div v-else class="flex flex-column gap-3">
-            <Button label="Signup" />
+        <!-- <Loader v-if="authStore.loader" /> -->
+        <div class="flex flex-column gap-3">
+            <Button @click="signup" label="Signup" />
             <span>Are you already registered? <router-link to="/signin">Sign in</router-link></span>
         </div>
     </form>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import { useAuthStore } from '../stores/auth';
+import InputText from 'primevue/inputtext';
+import Button from 'primevue/button';
+// import Message from 'primevue/message';
+// import Loader from '../components/Loader.vue'
+
+const email = ref();
+const password = ref();
+const authStore = useAuthStore()
+
+const signup = async () => {
+    await authStore.signup({ email: email.value, password: password.value })
+}
+
+</script>
