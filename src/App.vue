@@ -1,6 +1,6 @@
 <template>
   <nav class="menu">
-    <RouterLink to="/">Singn Up</RouterLink>
+    <RouterLink to="/signup">Singn Up</RouterLink>
     <RouterLink to="/signin">Singn In</RouterLink>
   </nav>
   <div class="container">

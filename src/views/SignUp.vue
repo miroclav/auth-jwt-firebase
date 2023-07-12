@@ -38,8 +38,8 @@ const signup = async () => {
         </div>
         <Loader v-if="authStore.loader" />
         <div v-else class="flex flex-column gap-3">
-            <Button label="Signup" @click="signup" />
-            <span>Are you already registered? <router-link to="/signin">Sign in</router-link></span>
+            <Button label="Sign up" @click="signup" />
+            <span>Are you already registered? <router-link to="/signin">Sign up</router-link></span>
         </div>
     </form>
 </template>
