@@ -1,6 +1,6 @@
 <template>
     <div>
-        SighnIn
+        SighnIn in my app
     </div>
 </template>
 
