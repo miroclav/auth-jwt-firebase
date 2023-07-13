@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import Card from 'primevue/card'
 import Loader from '../components/Loader.vue'
 
 export default {
