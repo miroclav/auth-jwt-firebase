@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { ref, onMounted } from 'vue'
+import axios from 'axios'
 import Card from 'primevue/card'
 import Loader from '../components/Loader.vue'
 
